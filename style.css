@@ -52,6 +52,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #9B4DBD !important;
+  border: 1px solid #9B4DBD !important;
+}
+
 #main-section {
   display: none;
 }
@@ -106,7 +111,6 @@ html {
 }
 
 #mobile-main h1 {
-  z-index: 5;
   padding: 40px 10px 0 10px;
   text-align: center;
   font-family: 'Amatic SC', cursive, sans-serif;
@@ -125,14 +129,26 @@ html {
   width: 100%;
   height: 50vh;
   background-color: #574C3C;
+  position: relative;
+  text-align: center;
+}
+
+#info-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#info-section i {
+  color: white;
+  font-size: 40px;
   display: block;
 }
 
 #info-section p {
-  text-align: center;
   color: white;
-  font-size: 25px;
-  padding: 60px 55px 0 55px;;
+  font-size: 20px;
 }
 
 /* Our Vets Section */
@@ -208,6 +224,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+  z-index: 50;
 }
 
 #our-services-content {
@@ -242,8 +259,8 @@ html {
 }
 
 #photo-gallery img {
-  width: 250px; /* You can set the dimensions to whatever you want */
-  height: 250px;
+  width: 200px; /* You can set the dimensions to whatever you want */
+  height: 200px;
   object-fit: cover;
   margin: 0 auto;
   display: block;
@@ -278,12 +295,8 @@ html {
     margin-top: 500px;
   }
 
-  #info-section p {
-    padding-top: 130px;
-  }
-
   #book-now form {
-    padding: 50px 150px;
+    padding: 20px 150px;
   }
 }
 
@@ -309,6 +322,7 @@ html {
     width: 100%    !important;
     height: auto   !important;
     position: relative;
+    display: flex;
   }
 
   #main-section h1 {
@@ -318,14 +332,13 @@ html {
     font-size: 100px;
     font-family: 'Amatic SC', cursive, sans-serif;
     color: white;
-
   }
 
   #large-side-nav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 250px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
+    z-index: 100; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -355,6 +368,10 @@ html {
 }
 
 @media only screen and (min-width: 1024px) {
+  #main-section h1 {
+    font-size: 65px;
+    left: 270px;
+  }
   #info-section p {
     font-size: 25px;
   }
@@ -362,14 +379,110 @@ html {
 }
 
 @media only screen and (min-width: 1440px) {
+  #info-section i {
+    font-size: 60px;
+  }
+
   #info-section p {
     font-size: 35px;
   }
 }
 
 @media only screen and (min-width: 2560px) {
-  #info-section p {
-    font-size: 75px;
+  #main-section h1 {
+    font-size: 200px;
+    left: 500px;
   }
 
+  #info-section i {
+    font-size: 90px;
+  }
+
+  #info-section p {
+    font-size: 55px;
+  }
+
+  #large-side-nav {
+    width: 450px; /* Set the width of the sidebar */
+  }
+  
+  #icon {
+    font-size: 130px;
+  }
+
+  #large-side-nav ul li a {
+    font-size: 80px;
+    font-family: 'Amatic SC', cursive, sans-serif;
+    color: #96BCC3;
+  }
+
+  /* Style page content */
+  #entire-content-wrapper{
+    margin-left: 450px; /* Same as the width of the sidebar */
+    padding: 0;
+  }
+
+  #our-vets-section h5 {
+      font-size: 80px;
+  }
+
+  #our-vets-section h6 {
+    font-size: 40px;
+  }
+
+  #our-vets-section p {
+    font-size: 30px;
+  }
+
+  #our-services-section {
+    padding: 40px;
+  }
+  #our-services-section h2 {
+    font-size: 140px;
+  }
+
+  #our-services-section ul li {
+    font-size: 40px;
+  }
+
+  #photo-gallery h2 {
+    font-size: 140px;
+  }
+
+  #photo-gallery img {
+    width: 450px; /* You can set the dimensions to whatever you want */
+    height: 450px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+  }
+
+  #book-now {
+    padding: 30px 200px 30px 200px;
+  }
+
+  #book-now h2 {
+    font-size: 140px;
+  }
+
+  #book-now form input[type="text"] {
+    font-size: 40px;
+  }
+
+  #book-now form input[type="email"] {
+    font-size: 40px;
+  }
+
+  #book-now form input[type="tel"] {
+    font-size: 40px;
+  }
+
+  #book-now form textarea{
+    font-size: 40px;
+  }
+
+  #book-now button {
+    font-size: 40px;
+  }
 }
